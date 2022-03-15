@@ -1,0 +1,174 @@
+/* Global Styles */
+
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background: #1C1C1C;
+    color: white;
+    font-family: Inter, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ /* Main Styles */
+
+ .invoiceWrapper {
+     min-width: 550px;
+     height: 550px;
+ }
+
+header {
+    background: #3A69D2;
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 800;
+    font-kerning: -2%;
+}
+
+.greetText {
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+p {
+    color: #D5D4D8;
+}
+
+main {
+    min-height: 100%;
+    background: #1F2937;
+    padding: 40px;
+}
+
+.servicesWrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 45px;
+}
+
+button {
+    width: 143px;
+    height: 45px;
+    background: #D1D4F4;
+    font-size: 14px;
+    font-weight: 500;
+    color: #4A4E74;
+    border-radius: 7px;
+    border-style: none;
+    cursor: pointer;
+}
+
+.receiptTop {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+ul {
+    /* display: flex;
+    justify-content: space-between; */
+    display: grid;
+    
+    list-style: none;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 600;
+    /* background: red; */
+}
+
+li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#remove-btn {
+    color: #D5D4D8;
+    font-size: 8px;
+    font-weight: 300;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.usd {
+    color: #918E9B;
+    font-weight: 300;
+}
+
+.price {
+    font-weight: 500;
+    margin-left: auto;
+}
+
+hr {
+    border: 1px solid #C3C6DB;
+    margin: 20px 0 20px 0;
+}
+
+.receiptBottom {
+    /* display: flex;
+    justify-content: space-between; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.notes {
+    color: #D5D4D8;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.totalAmount {
+    color: #D5D4D8;
+    font-size: 11px;
+    font-weight: 500;
+    text-align: right;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 500;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.paymentMethods {
+    color: #F5F5F5;
+    font-size: 11px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+#send-btn {
+    height: 45px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #3A69D2;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 7px;
+    margin-top: 60px;
+}
+
+svg {
+    margin-right: 10px;
+}
+

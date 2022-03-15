@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Invoice Generator</title>
+        <link rel="stylesheet" href="css/styles.css" />
+        <script src="index.js" defer></script>
+    </head>
+    <body>
+       <div class="invoiceWrapper">
+           <header>
+               <h1>Invoice creator</h1>
+               <p class="greetText">Thanks for choosing GoodCorp, LLC!</p>
+           </header>
+           <main>
+               <div class="servicesWrap">
+                    <button id="wash-btn">Wash Car: $10</button>
+                    <button id="mow-btn">Mow Lawn: $20</button>
+                    <button id="weeds-btn">Pull Weeds: $30</button>
+               </div>
+               <div class="receipt">
+                    <div class="receiptTop">
+                        <p>TASK</p>
+                        <p>TOTAL</p>
+                    </div>
+                    <ul id="list-items">
+                        <!-- <li>item 1<span id="remove-btn">Remove</span><p class="price"><span class="usd">$</span>10</p></li> -->
+                    </ul>
+                    <hr>
+                    <div class="receiptBottom">
+                        <p class="notes">NOTES</p>
+                        <p class="totalAmount">TOTAL AMOUNT</p>
+                        <div id="pymntMthd-el"></div>
+                        <!-- <p class="paymentMethods">We accept cash, credit card, or PayPal</p> -->
+                        <h2 id="total-cost">$0</h2>
+                    </div>
+               </div> <!-- / receipt -->
+               <div id="send-btn">
+                   <svg width="16" height="12" viewBox="0 0 52 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M45.2 2.40005H45.2003C46.4253 2.39982 47.604 2.86797 48.4951 3.70859C49.1377 4.31492 49.5957 5.08192 49.8277 5.92127L26 17.8336L2.17228 5.92127C2.40429 5.08192 2.86224 4.31492 3.50493 3.70859C4.39597 2.86797 5.5747 2.39982 6.7997 2.40005H6.79999H45.2ZM25.2844 28.2087L26 28.5665L26.7155 28.2087L50 16.5665V32.8001C50 34.0731 49.4943 35.294 48.5941 36.1942C47.6939 37.0943 46.473 37.6001 45.2 37.6001H6.79999C5.52696 37.6001 4.30606 37.0943 3.40588 36.1942C2.50571 35.294 1.99999 34.0731 1.99999 32.8001V16.5665L25.2844 28.2087Z" fill="white" stroke="white" stroke-width="3.2"/>
+                   </svg>
+                   <span></span>
+                   Send invoice
+               </div> <!-- / send-btn -->
+           </main>
+       </div> <!-- / invoiceWrapper --> 
+    </body>
+</html>
