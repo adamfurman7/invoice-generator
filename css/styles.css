@@ -19,7 +19,7 @@ html, body {
 
  .invoiceWrapper {
      min-width: 550px;
-     height: 550px;
+     min-height: 550px;
  }
 
 header {
@@ -45,7 +45,7 @@ p {
 }
 
 main {
-    min-height: 100%;
+    min-height: 450px;
     background: #1F2937;
     padding: 40px;
 }
@@ -66,6 +66,10 @@ button {
     border-radius: 7px;
     border-style: none;
     cursor: pointer;
+}
+
+button:hover {
+    border: 2px solid white;
 }
 
 .receiptTop {
@@ -92,6 +96,7 @@ li {
     width: 100%;
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 #remove-btn {
@@ -99,7 +104,14 @@ li {
     font-size: 8px;
     font-weight: 300;
     cursor: pointer;
-    margin-left: 15px;
+    margin-left: 10px;
+    padding: 2px 4px;
+}
+
+#remove-btn:hover {
+    background: #d5d4d859;
+    color: #white;
+    border-radius: 2px;
 }
 
 .usd {
@@ -114,7 +126,7 @@ li {
 
 hr {
     border: 1px solid #C3C6DB;
-    margin: 20px 0 20px 0;
+    margin: 5px 0 20px 0;
 }
 
 .receiptBottom {
@@ -165,7 +177,12 @@ h2 {
     font-weight: 400;
     text-align: center;
     border-radius: 7px;
-    margin-top: 60px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+#send-btn:hover {
+    background: #3f74e7;
 }
 
 svg {

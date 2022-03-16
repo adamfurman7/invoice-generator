@@ -1,4 +1,4 @@
-// Create array of services available and array of services requested
+// Create array of services available (as objects) and array of services requested
 const services = [{
     id: 0,
     name: "Wash Car",
@@ -14,13 +14,16 @@ const services = [{
     name: "Pull Weeds",
     price: 30,
 }]
+
 let servicesRequested = []
 
-// State of a services: added to request or not added 
+// State of a service: added to servicesRequested[] or not added. Used to determine whether an item can be added
 let washAdded = false
 let mowAdded = false
 let weedsAdded = false
 let paymentText = false
+
+// Get elements from HTML 
 let totalCost = document.getElementById("total-cost")
 const listItems = document.getElementById("list-items")
 const washBtn = document.getElementById("wash-btn")
@@ -30,7 +33,7 @@ const removeBtn = document.getElementById("remove-btn")
 const pymntMthdEl = document.getElementById("pymntMthd-el")
 const sendBtn = document.getElementById("send-btn")
 
-// Click service button to add to services and price arrays and display on receipt
+// Click service button to add to servicesRequested[], checking that it is not already added and if not, mark it as added. Display list item
 washBtn.addEventListener("click", function() {
     if (washAdded === false) {
         servicesRequested.push(services[0])
@@ -55,7 +58,9 @@ weedsBtn.addEventListener("click", function() {
     }
 })
 
-// Create function to add service to receipt with total cost; Cannot add service twice
+// Create function to add service and price to receipt with total cost; Cannot add service twice
+    // add remove button next to item listed to enable option to remove
+    // Render payment methods text
 function render(service) {
     let services = ""
     let total = 0
@@ -81,11 +86,9 @@ function render(service) {
     totalCost.textContent = `$${total}`
 }
 
-// Remove button removes item from list
+// function to remove service from receipt. Reset serviceAdded state to false
+    // remove payment methods if no services are listed on receipt
 function remove(serviceId) {
-    console.log(servicesRequested)
-    console.log(services[serviceId].id)
-    // console.log(index)
     let index = ""
     for (let i = 0; i < servicesRequested.length; i++) {
         if (servicesRequested[i].id === serviceId) {
@@ -105,12 +108,9 @@ function remove(serviceId) {
         pymntMthdEl.innerHTML = ""
         paymentText = false
     }
-    console.log(servicesRequested)
 }
 
-// Total cost must stay updated with each service added or removed
-
-// Send invoice button resets invoice
+// Send invoice button resets invoice.
 sendBtn.addEventListener("click", function() {
     remove(0)
     remove(1)
