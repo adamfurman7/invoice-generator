@@ -24,7 +24,7 @@ let weedsAdded = false
 let paymentText = false
 
 // Get elements from HTML 
-let totalCost = document.getElementById("total-cost")
+const totalCost = document.getElementById("total-cost")
 const listItems = document.getElementById("list-items")
 const washBtn = document.getElementById("wash-btn")
 const mowBtn = document.getElementById("mow-btn")
